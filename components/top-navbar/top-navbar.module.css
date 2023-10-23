@@ -1,0 +1,48 @@
+.container {
+    /* width: 100%; */
+    height: 72px;
+    border-bottom: 1px solid #EAECF0;
+    background: #FFFFFF;
+    padding: 0px 80px;
+
+}
+
+.navContainer {
+    padding: 0px 32px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.navbarMenuContainer {
+    display: flex;
+}
+
+.navbarMenu {
+    padding: 8px 12px;
+    font-family: "Inter-SemiBold";
+    color: #344054;
+    margin-right: 4px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.navbarMenu:hover {
+    background: #F9FAFB;
+}
+
+.profileMenuSection {
+    display: flex;
+    align-items: center;
+}
+
+.profileMenu {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
+    cursor: pointer;
+}
