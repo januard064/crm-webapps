@@ -1,0 +1,10 @@
+.container {
+    margin-top: 30px;
+    border-bottom: 1px solid #EAECF0;
+}
+
+.title {
+    margin-bottom: 21px;
+    font-family: "Inter-SemiBold";
+    font-size: 30px;
+}

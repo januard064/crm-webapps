@@ -1,0 +1,20 @@
+.buttonContainer {
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+    color: #667085;
+}
+
+.buttonContainer:hover {
+    background: #EFF8FF;
+}
+
+.buttonActiveContainer {
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+    color: #175CD3;
+    background: #EFF8FF;
+}
