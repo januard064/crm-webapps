@@ -1,0 +1,46 @@
+.errorContainer {
+    height: 475px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFE4E8;
+    border-radius: 12px;
+    border: 1px solid #EAECF0
+}
+
+.errorInfo {
+    align-items: center;
+    text-align: center;
+    color: #89123E;
+}
+
+.errorTitle {
+    font-family: "Inter-SemiBold";
+    margin-top: 16px;
+}
+
+.errorSubtitle {
+    font-family: "Inter-Regular";
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.actionSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.actionButtom {
+    padding: 10px 18px;
+    color: #344054;
+    font-family: "Inter-SemiBold";
+    background: #FFFFFF;
+    width: fit-content;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #D0D5DD
+}
