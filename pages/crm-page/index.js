@@ -5,6 +5,7 @@ import Styles from './crm-page.module.css'
 // import components
 import TitleSeparator from "@/components/title-separator/title-separator"
 import Button from '@/components/button/button'
+import SearchBar from '@/components/search-bar/search-bar'
 
 const CrmPage = () => {
 
@@ -40,6 +41,10 @@ const CrmPage = () => {
                             </div>
                         ))
                     }
+                </div>
+
+                <div style={{ marginTop:'20px' }}>
+                    <SearchBar />
                 </div>
             </div>
         </>

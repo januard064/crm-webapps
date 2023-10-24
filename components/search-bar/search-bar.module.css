@@ -1,0 +1,38 @@
+.searchContainer {
+    position: relative;
+}
+
+
+.searchContainer input {
+    padding-left: 42px;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #667085;
+    height: 44px;
+    width: 320px;
+    font-family: "Inter-Regular";
+}
+
+.searchContainer input:focus {
+    border: 1px solid #D0D5DD;
+    outline: none;
+}
+
+.searchContainer input:active {
+    border: 1px solid #D0D5DD;
+    outline: none;
+}
+
+.searchContainer input::placeholder {
+    color: #667085;
+    font-size: 16px;
+    font-family: "Inter-Regular";
+}
+
+.iconSearch {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+}
