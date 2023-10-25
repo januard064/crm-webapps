@@ -9,6 +9,7 @@ import TitleSeparator from "@/components/title-separator/title-separator"
 import Button from '@/components/button/button'
 import SearchBar from '@/components/search-bar/search-bar'
 import ErrorComponent from '@/components/error-component/error-component'
+import PaginationTable from '@/components/pagination-table/pagination-table'
 
 const CrmPage = () => {
 
@@ -49,6 +50,7 @@ const CrmPage = () => {
                     const result = await response.json()
                     setIsError(false)
                     setClients(result)
+                    console.log('res', result)
                 }
 
             } catch (error) {
@@ -81,7 +83,6 @@ const CrmPage = () => {
                 </div>
 
                 <div style={{ marginTop: '20px' }}>
-
                     {
                         isError ? (
                             <>
@@ -89,12 +90,10 @@ const CrmPage = () => {
                             </>
                         ) : (
                             <>
-                            {clients.length}
+                                <PaginationTable data={clients} />
                             </>
                         )
                     }
-
-
                 </div>
             </div>
         </>

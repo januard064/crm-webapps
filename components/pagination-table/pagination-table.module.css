@@ -1,0 +1,116 @@
+.tableContainer {
+    border-radius: 12px;
+    box-shadow: 0px 1px 2px 0px #1018280F;
+    box-shadow: 0px 1px 3px 0px #1018281A;
+}
+
+.tableContainer table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.tableHeader {
+    display: flex;
+    align-items: center;
+    color: #475467;
+    font-family: "Inter-Medium";
+    font-size: 12px;
+    height: 44px;
+    text-align: left;
+    background: #F9FAFB;
+    border-color: #EAECF0;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-radius: 12px 12px 0px 0px;
+}
+
+
+
+.tableRowHeader {
+    background-color: transparent;
+    transition: all 0.25s ease;
+    border-radius: 10px;
+    border: 1px solid #EAECF0;
+
+}
+
+.tableContainer td {}
+
+.tableBodyRow {
+    color: #475467;
+    font-family: "Inter-Regular";
+    font-size: 14px;
+    height: 72px;
+    border: 1px solid #EAECF0;
+}
+
+.checkboxContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.checkboxContainer input:checked{
+
+}
+
+.checkbox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #D0D5DD;
+}
+
+.checkbox:checked {
+    background-color: gray;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    border-color: #EAECF0;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.paginationRangeContainer {
+    display: flex;
+    align-items: center;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginationButton {
+    display: flex;
+    align-items: center;
+    font-family: "Inter-SemiBold";
+    font-size: 14px;
+    padding: 8px 14px;
+    color: #344054;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.paginationRange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+    font-family: "Inter-Medium";
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    color: #475467;
+    cursor: pointer;
+    border-radius: 8px;
+}

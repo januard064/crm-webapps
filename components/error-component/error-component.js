@@ -19,8 +19,10 @@ const ErrorComponent = (props) => {
     return (
         <div className={styles.errorContainer}>
             <div className={styles.errorInfo}>
-                <div>
-                    <WarningIcon />
+                <div className={styles.justifyCenter}>
+                    <div className={styles.warningContainer}>
+                        <WarningIcon />
+                    </div>
                 </div>
                 <div className={styles.errorTitle}>
                     {title}

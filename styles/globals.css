@@ -9,6 +9,11 @@ body {
 }
 
 @font-face {
+    font-family: "Inter-Medium";
+    src: url('../font-family/inter/Inter-Medium.ttf');
+}
+
+@font-face {
     font-family: "Inter-SemiBold";
     src: url('../font-family/inter/Inter-SemiBold.ttf');
 }
