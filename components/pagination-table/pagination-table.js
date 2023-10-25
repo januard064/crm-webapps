@@ -27,7 +27,7 @@ const TableHeader = () => {
 
 const PaginationTable = (props) => {
 
-    const { data } = props
+    const { data, onClickTableRow } = props
 
     const [currentPage, setCurrentPage] = useState(1)
 
@@ -43,13 +43,13 @@ const PaginationTable = (props) => {
             <table>
                 <tbody>
                     {currentTableData.map((dataRow, index) => (
-                        <tr key={index} className={styles.tableBodyRow}>
+                        <tr key={index} className={styles.tableBodyRow} onClick={onClickTableRow}>
                             <td style={{ padding: '26px 12px 26px 24px' }}>
                                 <div className={styles.checkboxContainer}>
                                     <input type='checkbox' className={styles.checkbox} />
                                 </div>
                             </td>
-                            <td style={{ width: '25%', fontFamily:"Inter-Medium" , color:"#101828"}}>{dataRow.name}</td>
+                            <td style={{ width: '25%', fontFamily: "Inter-Medium", color: "#101828" }}>{dataRow.name}</td>
                             <td style={{ width: '15%' }}>{dataRow.gender}</td>
                             <td style={{ width: '15%' }}>{'dataRow.dob'}</td>
                             <td style={{ width: '20%' }}>{dataRow.maritalStatus}</td>

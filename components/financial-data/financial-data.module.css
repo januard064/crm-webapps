@@ -1,0 +1,19 @@
+.financialDataContainer {
+    margin-top: 25px;
+}
+
+.financialRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 24px;
+    font-size: 14px;
+    line-height: 20px;
+    border-style: solid;
+    border-color: #EAECF0;
+    border-width: 0px 1px 0px 1px;
+}
+
+.financialRow:hover{
+    background: #F9FAFB;
+}

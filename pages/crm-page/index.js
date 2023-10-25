@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
+import { useRouter } from 'next/router'
+
 import Styles from './crm-page.module.css'
 
 import { API_UTILS } from '@/utils/api-utils'
+import { ROUTER_PATH } from '@/components/constanta/route-path'
 
 // import components
 import TitleSeparator from "@/components/title-separator/title-separator"
@@ -12,6 +15,8 @@ import ErrorComponent from '@/components/error-component/error-component'
 import PaginationTable from '@/components/pagination-table/pagination-table'
 
 const CrmPage = () => {
+
+    const router = useRouter()
 
     const [activeTab, setActiveTab] = useState(0)
 
@@ -37,6 +42,10 @@ const CrmPage = () => {
         }
     ]
 
+    const handleOpenProfile = () => {
+        router.push(ROUTER_PATH.PROFILE_PAGE)
+    }
+
 
     useEffect(() => {
 
@@ -59,8 +68,6 @@ const CrmPage = () => {
         }
 
         fetchData()
-
-        console.log('seses')
     }, [])
 
 
@@ -90,7 +97,7 @@ const CrmPage = () => {
                             </>
                         ) : (
                             <>
-                                <PaginationTable data={clients} />
+                                <PaginationTable data={clients} onClickTableRow={handleOpenProfile} />
                             </>
                         )
                     }

@@ -1,0 +1,15 @@
+.profileDataContainer {
+    background: #F9FAFB;
+    border-radius: 12px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    padding: 20px 24px;
+
+}
+
+.profileTable {
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 56px;
+}

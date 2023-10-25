@@ -1,0 +1,27 @@
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #EAECF0;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+}
+
+.flexStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button {
+    font-family: "Inter-SemiBold";
+    font-size: 14px;
+    line-height: 20px;
+    color: #344054;
+    padding: 8px 14px;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    border-radius: 8px;
+    cursor: pointer;
+}

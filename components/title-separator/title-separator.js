@@ -7,7 +7,7 @@ const TitleSeparator = (props) => {
     return (
         <div className={Styles.container}>
             <div className={Styles.title}>
-                CRM
+                {title}
             </div>
         </div>
     )

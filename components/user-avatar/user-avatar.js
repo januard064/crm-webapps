@@ -3,14 +3,13 @@ import Image from "next/image"
 
 import Styles from './user-avatar.module.css'
 
-import UserAvatarURL from '../images/user-avatar.png'
+const UserAvatar = (props) => {
 
-
-const UserAvatar = () => {
+    const { style, imageUrl } = props
 
     return (
-        <div className={Styles.imageContainer}>
-            <Image className={Styles.image} src={UserAvatarURL} width={400} height={400} />
+        <div className={Styles.imageContainer} style={...style}>
+            <Image alt="user-profile" className={Styles.image} src={imageUrl} width={400} height={400} />
         </div>
 
     )

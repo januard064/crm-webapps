@@ -2,10 +2,13 @@ import React from "react"
 
 import styles from '../top-navbar/top-navbar.module.css'
 
+import UserAvatarURL from '../images/user-avatar.png'
+
 // import icons
 import SearchIcon from "../icons/search-icon"
 import SettingsIcon from "../icons/settings-icon"
 import BellIcon from "../icons/bell-icon"
+
 
 import CompanyLogo from "../icons/company-logo"
 
@@ -61,7 +64,7 @@ const TopNavBar = () => {
                         <BellIcon />
                     </div>
                     <div style={{ marginLeft: 12 }}>
-                        <UserAvatar />
+                        <UserAvatar imageUrl={UserAvatarURL} />
                     </div>
                 </div>
             </div>

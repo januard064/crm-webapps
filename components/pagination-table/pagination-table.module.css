@@ -43,6 +43,7 @@
     font-size: 14px;
     height: 72px;
     border: 1px solid #EAECF0;
+    cursor: pointer;
 }
 
 .checkboxContainer {
@@ -63,7 +64,7 @@
 }
 
 .checkbox:checked {
-    background-color: gray;
+    background-color: #D0D5DD;
 }
 
 .paginationContainer {
