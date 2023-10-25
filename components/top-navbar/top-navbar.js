@@ -1,8 +1,12 @@
 import React from "react"
 
+import { useRouter } from "next/router"
+
 import styles from '../top-navbar/top-navbar.module.css'
 
 import UserAvatarURL from '../images/user-avatar.png'
+
+import { ROUTER_PATH } from "../constanta/route-path"
 
 // import icons
 import SearchIcon from "../icons/search-icon"
@@ -16,27 +20,39 @@ import CompanyLogo from "../icons/company-logo"
 import UserAvatar from "../user-avatar/user-avatar"
 
 
-const NAVBAR_MENU = [
-    {
-        id: 'dashboard',
-        title: 'Dashboard'
-    },
-    {
-        id: 'crm',
-        title: 'CRM'
-    },
-    {
-        id: 'submission',
-        title: 'Submission'
-    },
-    {
-        id: 'lms',
-        title: 'LMS'
-    }
-]
 
 const TopNavBar = () => {
 
+    const router = useRouter()
+
+
+    const NAVBAR_MENU = [
+        {
+            id: 'dashboard',
+            title: 'Dashboard',
+            onClick: () => { }
+        },
+        {
+            id: 'crm-page',
+            title: 'CRM',
+            onClick: () => {
+                router.push(ROUTER_PATH.CRM_PAGE)
+            }
+        },
+        {
+            id: 'submission',
+            title: 'Submission',
+            onClick: () => { }
+        },
+        {
+            id: 'lms',
+            title: 'LMS',
+            onClick: () => { }
+        }
+    ]
+
+    const { pathname } = useRouter();
+    
     return (
         <div className={styles.container}>
             <div className={styles.navContainer}>
@@ -47,7 +63,7 @@ const TopNavBar = () => {
                     </div>
 
                     {NAVBAR_MENU.map((menu, index) => (
-                        <div className={styles.navbarMenu}>
+                        <div className={styles.navbarMenu} onClick={menu.onClick} style={{ background: menu.id == pathname.slice(1) ? '#F9FAFB' : '' }}>
                             {menu.title}
                         </div>
                     ))

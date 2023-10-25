@@ -2,6 +2,8 @@ import React, { useMemo, useState } from 'react'
 
 import styles from './pagination-table.module.css'
 
+import { getDateFormat } from '@/utils/function-utils'
+
 // import component
 import Pagination from './pagination'
 
@@ -43,17 +45,17 @@ const PaginationTable = (props) => {
             <table>
                 <tbody>
                     {currentTableData.map((dataRow, index) => (
-                        <tr key={index} className={styles.tableBodyRow} onClick={onClickTableRow}>
+                        <tr key={index} className={styles.tableBodyRow}>
                             <td style={{ padding: '26px 12px 26px 24px' }}>
                                 <div className={styles.checkboxContainer}>
                                     <input type='checkbox' className={styles.checkbox} />
                                 </div>
                             </td>
-                            <td style={{ width: '25%', fontFamily: "Inter-Medium", color: "#101828" }}>{dataRow.name}</td>
-                            <td style={{ width: '15%' }}>{dataRow.gender}</td>
-                            <td style={{ width: '15%' }}>{'dataRow.dob'}</td>
-                            <td style={{ width: '20%' }}>{dataRow.maritalStatus}</td>
-                            <td style={{ width: '20%' }}>{dataRow.employmentStatus}</td>
+                            <td onClick={onClickTableRow} style={{ width: '25%', fontFamily: "Inter-Medium", color: "#101828" }}>{dataRow.name}</td>
+                            <td onClick={onClickTableRow} style={{ width: '15%' }}>{dataRow.gender}</td>
+                            <td onClick={onClickTableRow} style={{ width: '15%' }}>{getDateFormat(dataRow.dob)}</td>
+                            <td onClick={onClickTableRow} style={{ width: '20%' }}>{dataRow.maritalStatus}</td>
+                            <td onClick={onClickTableRow} style={{ width: '20%' }}>{dataRow.employmentStatus}</td>
                         </tr>
                     ))}
                 </tbody>

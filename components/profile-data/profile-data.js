@@ -1,6 +1,8 @@
 
 import styles from './profile-data.module.css'
 
+import { getDateFormat } from '@/utils/function-utils'
+
 const ProfileTable = ({ head, body }) => {
 
     return (
@@ -18,7 +20,7 @@ const ProfileData = (props) => {
     return (
         <div className={styles.profileDataContainer}>
             <ProfileTable head={"Gender"} body={data.gender} />
-            <ProfileTable head={"DOB"} body={data.gender} />
+            <ProfileTable head={"DOB"} body={getDateFormat(data.dob)} />
             <ProfileTable head={"Marital Status"} body={data.maritalStatus} />
             <ProfileTable head={"Employment"} body={data.employmentStatus} />
         </div>
