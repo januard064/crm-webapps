@@ -24,6 +24,10 @@ const CrmPage = () => {
 
     const [isError, setIsError] = useState(false)
 
+    const [searchText, setSearchText] = useState('')
+
+    const [filteredClients, setFilteredClients] = useState([])
+
     const CRM_MENU = [
         {
             id: 0,
@@ -59,7 +63,7 @@ const CrmPage = () => {
                     const result = await response.json()
                     setIsError(false)
                     setClients(result)
-                    console.log('res', result)
+                    setFilteredClients(result)
                 }
 
             } catch (error) {
@@ -69,6 +73,14 @@ const CrmPage = () => {
 
         fetchData()
     }, [])
+
+    useEffect(() => {
+
+        const filterClients = clients.filter((client) => client.name.toLowerCase().includes(searchText.toLowerCase()))
+
+        setFilteredClients(filterClients)
+
+    }, [searchText])
 
 
     return (
@@ -86,7 +98,7 @@ const CrmPage = () => {
                 </div>
 
                 <div style={{ marginTop: '20px' }}>
-                    <SearchBar />
+                    <SearchBar searchText={searchText} setSearchText={setSearchText} />
                 </div>
 
                 <div style={{ marginTop: '20px' }}>
@@ -97,7 +109,7 @@ const CrmPage = () => {
                             </>
                         ) : (
                             <>
-                                <PaginationTable data={clients} onClickTableRow={handleOpenProfile} />
+                                <PaginationTable data={filteredClients} onClickTableRow={handleOpenProfile} />
                             </>
                         )
                     }

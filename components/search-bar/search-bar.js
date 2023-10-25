@@ -6,7 +6,14 @@ import styles from './search-bar.module.css'
 import SearchIcon from '../icons/search-icon'
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+
+    const { searchText, setSearchText } = props
+
+    const handleSearchText = (e) => {
+        e.preventDefault()
+        setSearchText(e.target.value)
+    }
 
     return (
         <div className={styles.searchContainer}>
@@ -14,7 +21,7 @@ const SearchBar = () => {
                 <SearchIcon />
             </div>
             <form>
-                <input placeholder="Search your favourites" className={styles.form} name={'search'} />
+                <input placeholder="Search your favourites" className={styles.form} name={'search'} value={searchText} onChange={handleSearchText} />
             </form>
         </div>
     )

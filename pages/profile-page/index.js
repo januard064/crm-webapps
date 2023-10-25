@@ -27,15 +27,12 @@ const ProfilePage = () => {
             try {
                 const response = await fetch(`${API_UTILS}/profile`)
 
-                console.log(response.status)
-
                 if (response.status >= 400) {
                     setIsError(true)
                 } else {
                     const result = await response.json()
                     setIsError(false)
                     setProfile(result)
-                    console.log('res', result)
                 }
 
             } catch (error) {

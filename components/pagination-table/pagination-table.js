@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 
 import styles from './pagination-table.module.css'
 
@@ -33,11 +33,24 @@ const PaginationTable = (props) => {
 
     const [currentPage, setCurrentPage] = useState(1)
 
-    const currentTableData = useMemo(() => {
+    const [currentTableData, setCurrentTableData] = useState([])
+
+    useEffect(() => {
         const firstPageIndex = (currentPage - 1) * PageSize;
         const lastPageIndex = firstPageIndex + PageSize;
-        return data.slice(firstPageIndex, lastPageIndex);
-    }, [currentPage])
+        const currentData = data.slice(firstPageIndex, lastPageIndex);
+
+        setCurrentTableData(currentData)
+
+    }, [data, currentPage])
+
+    // const currentTableData = useMemo(() => {
+    //     const firstPageIndex = (currentPage - 1) * PageSize;
+    //     const lastPageIndex = firstPageIndex + PageSize;
+    //     return data.slice(firstPageIndex, lastPageIndex);
+    // }, [currentPage])
+
+    console.log('currentTableData', currentTableData)
 
     return (
         <div className={styles.tableContainer}>
