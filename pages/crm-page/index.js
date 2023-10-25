@@ -13,6 +13,8 @@ import Button from '@/components/button/button'
 import SearchBar from '@/components/search-bar/search-bar'
 import ErrorComponent from '@/components/error-component/error-component'
 import PaginationTable from '@/components/pagination-table/pagination-table'
+import ChipAction from '@/components/chip-action/chip-action'
+import OverFlowMenu from '@/components/overflow-menu/overflow-menu'
 
 const CrmPage = () => {
 
@@ -42,6 +44,32 @@ const CrmPage = () => {
         {
             id: 2,
             title: 'Policy',
+            action: () => { }
+        }
+    ]
+
+    const GENDER_FILTER = [
+        {
+            title: 'Male',
+            action: () => { }
+        },
+        {
+            title: 'Female',
+            action: () => { }
+        }
+    ]
+
+    const MARTIAL_FILTER = [
+        {
+            title: 'Single',
+            action: () => { }
+        },
+        {
+            title: 'Married',
+            action: () => { }
+        },
+        {
+            title: 'Divorced',
             action: () => { }
         }
     ]
@@ -97,8 +125,11 @@ const CrmPage = () => {
                     }
                 </div>
 
-                <div style={{ marginTop: '20px' }}>
+                <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
                     <SearchBar searchText={searchText} setSearchText={setSearchText} />
+
+                    <OverFlowMenu title={'Gender'} menuId={'gender-menu'} menu={GENDER_FILTER} />
+                    <OverFlowMenu title={'Marital Status'} menuId={'martial-menu'} menu={MARTIAL_FILTER} />
                 </div>
 
                 <div style={{ marginTop: '20px' }}>

@@ -1,0 +1,37 @@
+.overflowMenuContainer {
+    margin-left: 15px;
+    position: relative;
+}
+
+.overflowMenu {
+    width: 240px;
+    background: #FFFFFF;
+    position: absolute;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 4px 6px;
+    border: 1px solid #EAECF0;
+    box-shadow: 0px 4px 6px -2px #10182808;
+    box-shadow: 0px 12px 16px -4px #10182814;
+    display: none;
+}
+
+.menuItem {
+    height: 38px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Inter-Medium";
+    font-size: 14px;
+    color: #344054;
+    pointer-events:'none';
+    position: relative
+}
+
+.checkbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #D0D5DD;
+}

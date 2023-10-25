@@ -1,0 +1,12 @@
+.chipActionContainer {
+    font-size: 14px;
+    font-family: "Inter-Medium";
+    line-height: 20px;
+    padding: 4px 12px;
+    border-radius: 16px;
+    background: #F9FAFB;
+    border: 1px solid #EAECF0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
