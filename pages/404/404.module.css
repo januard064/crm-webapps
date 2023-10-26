@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 72px);
+    width: 100%;
+}
+
+.errorInfo {
+    font-family: "Inter-SemiBold";
+    font-size: 16px;
+    color: #175CD3;
+}
+
+.title {
+    font-family: "Inter-SemiBold";
+    font-size: 60px;
+    color: #101828;
+    margin-top: 12px;
+}
+
+.subTitle {
+    font-family: "Inter-Regular";
+    font-size: 20px;
+    color: #475467;
+    margin-top: 24px;
+}
+
+.actionSection {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    font-family: "Inter-SemiBold";
+    font-size: 14px;
+    padding: 16px 28px;
+    color: #344054;
+    border: 1px solid #D0D5DD;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeButton {
+    display: flex;
+    align-items: center;
+    font-family: "Inter-SemiBold";
+    font-size: 14px;
+    padding: 16px 28px;
+    color: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 12px;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    border: 1px solid #1570EF;
+    background: #1570EF;
+}

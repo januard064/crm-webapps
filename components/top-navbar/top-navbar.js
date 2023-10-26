@@ -30,7 +30,9 @@ const TopNavBar = () => {
         {
             id: 'dashboard',
             title: 'Dashboard',
-            onClick: () => { }
+            onClick: () => {
+                router.push(ROUTER_PATH.DASHBOARD)
+            }
         },
         {
             id: 'crm-page',
@@ -42,17 +44,21 @@ const TopNavBar = () => {
         {
             id: 'submission',
             title: 'Submission',
-            onClick: () => { }
+            onClick: () => {
+                router.push(ROUTER_PATH.SUBMISSION)
+            }
         },
         {
             id: 'lms',
             title: 'LMS',
-            onClick: () => { }
+            onClick: () => {
+                router.push(ROUTER_PATH.LMS)
+            }
         }
     ]
 
     const { pathname } = useRouter();
-    
+
     return (
         <div className={styles.container}>
             <div className={styles.navContainer}>
