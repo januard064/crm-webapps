@@ -9,20 +9,34 @@ import Pagination from './pagination'
 
 let PageSize = 3
 
-const TableHeader = () => {
+
+const TableBody = (props) => {
+
+    const { data, onClickTableRow, isCheck, setIsCheck } = props
+
+    const handleClick = (e) => {
+        const { id, checked } = e.target;
+        setIsCheck([...isCheck, id]);
+        if (!checked) {
+            setIsCheck(isCheck.filter(item => item !== id));
+        }
+    }
+
     return (
-        <div className={styles.tableHeader}>
-            <div style={{ padding: '12px 12px 12px 24px' }}>
-                <div className={styles.checkboxContainer}>
-                    <input type='checkbox' className={styles.checkbox} />
+
+        <tr className={styles.tableBodyRow}>
+            <td style={{ padding: '26px 12px 26px 24px' }}>
+                <div className={styles.checkboxContainer} onClick={handleClick}>
+                    <input id={data.id} type='checkbox' checked={isCheck.includes(data.id)} className={styles.checkbox} />
                 </div>
-            </div>
-            <div style={{ width: '25%' }}>Name</div>
-            <div style={{ width: '15%' }}>Gender</div>
-            <div style={{ width: '15%' }}>DOB</div>
-            <div style={{ width: '20%' }}>Martial Status</div>
-            <div style={{ width: '20%' }}>Employement</div>
-        </div>
+            </td>
+            <td onClick={onClickTableRow} style={{ width: '25%', fontFamily: "Inter-Medium", color: "#101828" }}>{data.name}</td>
+            <td onClick={onClickTableRow} style={{ width: '15%' }}>{data.gender}</td>
+            <td onClick={onClickTableRow} style={{ width: '15%' }}>{getDateFormat(data.dob)}</td>
+            <td onClick={onClickTableRow} style={{ width: '20%' }}>{data.maritalStatus}</td>
+            <td onClick={onClickTableRow} style={{ width: '20%' }}>{data.employmentStatus}</td>
+        </tr>
+
     )
 }
 
@@ -35,6 +49,10 @@ const PaginationTable = (props) => {
 
     const [currentTableData, setCurrentTableData] = useState([])
 
+    const [isCheckAll, setIsCheckAll] = useState(false);
+
+    const [isCheck, setIsCheck] = useState([]);
+
     useEffect(() => {
         const firstPageIndex = (currentPage - 1) * PageSize;
         const lastPageIndex = firstPageIndex + PageSize;
@@ -46,27 +64,36 @@ const PaginationTable = (props) => {
 
     useEffect(() => {
         setCurrentPage(1)
-    },[data])
+    }, [data])
 
+    const handleSelectAll = e => {
+        setIsCheckAll(!isCheckAll);
+        setIsCheck(data.map(li => li.id));
+        if (isCheckAll) {
+            setIsCheck([]);
+        }
+    };
 
     return (
         <div className={styles.tableContainer}>
-            <TableHeader />
             <table>
+                <thead>
+                    <tr className={styles.tableHeader}>
+                        <td style={{ padding: '12px 12px 12px 24px' }}>
+                            <div className={styles.checkboxContainer} onClick={handleSelectAll}>
+                                <input type='checkbox' className={styles.checkbox} />
+                            </div>
+                        </td>
+                        <td style={{ width: '25%' }}>Name</td>
+                        <td style={{ width: '15%' }}>Gender</td>
+                        <td style={{ width: '15%' }}>DOB</td>
+                        <td style={{ width: '20%' }}>Martial Status</td>
+                        <td style={{ width: '20%' }}>Employement</td>
+                    </tr>
+                </thead>
                 <tbody>
                     {currentTableData.map((dataRow, index) => (
-                        <tr key={index} className={styles.tableBodyRow}>
-                            <td style={{ padding: '26px 12px 26px 24px' }}>
-                                <div className={styles.checkboxContainer}>
-                                    <input type='checkbox' className={styles.checkbox} />
-                                </div>
-                            </td>
-                            <td onClick={onClickTableRow} style={{ width: '25%', fontFamily: "Inter-Medium", color: "#101828" }}>{dataRow.name}</td>
-                            <td onClick={onClickTableRow} style={{ width: '15%' }}>{dataRow.gender}</td>
-                            <td onClick={onClickTableRow} style={{ width: '15%' }}>{getDateFormat(dataRow.dob)}</td>
-                            <td onClick={onClickTableRow} style={{ width: '20%' }}>{dataRow.maritalStatus}</td>
-                            <td onClick={onClickTableRow} style={{ width: '20%' }}>{dataRow.employmentStatus}</td>
-                        </tr>
+                        <TableBody data={dataRow} onClickTableRow={onClickTableRow} isCheck={isCheck} setIsCheck={setIsCheck} />
                     ))}
                 </tbody>
             </table>
