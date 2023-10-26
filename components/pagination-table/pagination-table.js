@@ -44,13 +44,10 @@ const PaginationTable = (props) => {
 
     }, [data, currentPage])
 
-    // const currentTableData = useMemo(() => {
-    //     const firstPageIndex = (currentPage - 1) * PageSize;
-    //     const lastPageIndex = firstPageIndex + PageSize;
-    //     return data.slice(firstPageIndex, lastPageIndex);
-    // }, [currentPage])
+    useEffect(() => {
+        setCurrentPage(1)
+    },[data])
 
-    console.log('currentTableData', currentTableData)
 
     return (
         <div className={styles.tableContainer}>
