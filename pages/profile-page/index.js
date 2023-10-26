@@ -60,15 +60,15 @@ const ProfilePage = () => {
 
                     <SubTitleSeparator title={"Goals"} style={{ marginTop: '25px' }} />
                     <div className={styles.profileGoals}>
-                        <CardComponent title={"Emergency Fund"} data={profile.goals.emergencyFund} imageUrl={ProfileImage} style={{ width: 'calc(50% - 60px)' }} actionTitle={"Edit"} />
-                        <CardComponent title={"Travel"} data={profile.goals.travel} imageUrl={Avatar2} style={{ width: 'calc(50% - 60px)' }} actionTitle={"Edit"} />
+                        <CardComponent title={"Emergency Fund"} data={profile.goals.emergencyFund} imageUrl={ProfileImage} actionTitle={"Edit"} />
+                        <CardComponent title={"Travel"} data={profile.goals.travel} imageUrl={Avatar2}  actionTitle={"Edit"} />
                     </div>
 
 
                     <SubTitleSeparator title={"Insurances"} style={{ marginTop: '25px' }} />
                     <div className={styles.profileGoals}>
-                        <CardComponent title={"Life Insurance"} data={profile.insurances.lifeInsurance} imageUrl={Avatar2} style={{ width: 'calc(50% - 60px)' }} actionTitle={"View insurance"} />
-                        <CardComponent title={"Personal Accident"} data={profile.insurances.personalAccident} imageUrl={Avatar2} style={{ width: 'calc(50% - 60px)' }} actionTitle={"View insurance"} />
+                        <CardComponent title={"Life Insurance"} data={profile.insurances.lifeInsurance} imageUrl={Avatar2} actionTitle={"View insurance"} />
+                        <CardComponent title={"Personal Accident"} data={profile.insurances.personalAccident} imageUrl={Avatar2} actionTitle={"View insurance"} />
                     </div>
                 </div>
             )}

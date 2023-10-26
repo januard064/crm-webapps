@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
+
 }
 
 .navbarMenuContainer {
@@ -45,4 +45,46 @@
     justify-content: center;
     margin-right: 4px;
     cursor: pointer;
+}
+
+.hamburgerIcon {
+    display: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.hamburgerMenu {
+    display: none;
+    border-bottom: 1px solid #EAECF0;
+    box-shadow: 0px 3px 2px 0px #1018280D;
+}
+
+.hamburgerItem{
+    padding: 12px 24px;
+    font-family: "Inter-SemiBold";
+    color: #344054;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0px;
+    }
+
+    .navContainer {
+        padding: 0px 24px;
+    }
+
+    .navbarMenuContainer {
+        display: none;
+    }
+
+    .hamburgerIcon {
+        display: block;
+    }
+
+    /* .hamburgerMenu{
+        display: block;
+    } */
 }

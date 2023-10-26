@@ -4,3 +4,11 @@
     align-items: center;
     margin-top: 25px;
 }
+
+/* for medium */
+@media only screen and (max-width: 768px) {
+    .profileGoals{
+        flex-direction: column;
+        padding: 0px 24px;
+    }
+}

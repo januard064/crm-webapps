@@ -1,7 +1,9 @@
+import styles from './layout.module.css'
+
 const Layout = (props) => {
 
     return (
-        <div style={{ padding: '0px 112px' }}>
+        <div className={styles.layoutContainer}>
             {props.children}
         </div>
     )
