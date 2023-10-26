@@ -14,6 +14,24 @@
     border-width: 0px 1px 0px 1px;
 }
 
-.financialRow:hover{
+.financialRow:hover {
     background: #F9FAFB;
+}
+
+.head {
+    width: 90%;
+}
+
+.body {
+    width: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+    .head {
+        width: 70%;
+    }
+
+    .body {
+        width: 30%;
+    }
 }

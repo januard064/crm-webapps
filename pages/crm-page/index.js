@@ -59,7 +59,7 @@ const CrmPage = () => {
         }
     ]
 
-    const MARTIAL_FILTER = [
+    const marital_FILTER = [
         {
             title: 'Single',
             action: () => { }
@@ -125,11 +125,13 @@ const CrmPage = () => {
                     }
                 </div>
 
-                <div style={{ marginTop: '20px', display: 'flex', alignItems: 'center' }}>
+                <div className={Styles.filterSection}>
                     <SearchBar searchText={searchText} setSearchText={setSearchText} />
 
-                    <OverFlowMenu title={'Gender'} menuId={'gender-menu'} menu={GENDER_FILTER} />
-                    <OverFlowMenu title={'Marital Status'} menuId={'martial-menu'} menu={MARTIAL_FILTER} />
+                    <div className={Styles.chipSection}>
+                        <OverFlowMenu title={'Gender'} menuId={'gender-menu'} menu={GENDER_FILTER} />
+                        <OverFlowMenu title={'Marital Status'} menuId={'marital-menu'} menu={marital_FILTER} />
+                    </div>
                 </div>
 
                 <div style={{ marginTop: '20px' }}>

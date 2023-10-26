@@ -12,10 +12,10 @@ const FinancialRow = ({ head, body, isFirst, isLast }) => {
                 borderBottom: isLast ? '1px solid #EAECF0' : '',
             }}
         >
-            <div style={{ width: '90%', fontFamily: "Inter-Medium", color: "#101828" }}>
+            <div style={{ fontFamily: "Inter-Medium", color: "#101828" }} className={styles.head}>
                 {head}
             </div>
-            <div style={{ width: '10%', fontFamily: "Inter-Regular", color: "#475467" }}>
+            <div style={{ fontFamily: "Inter-Regular", color: "#475467" }} className={styles.body}>
                 ${body}
             </div>
         </div>

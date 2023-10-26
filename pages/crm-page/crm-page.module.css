@@ -1,9 +1,34 @@
-.container{
+.container {
     margin-top: 20px;
 }
 
-.tabContainer{
+.tabContainer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.filterSection {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.chipSection {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .filterSection {
+        flex-direction: column;
+        align-items: start;
+        margin-left: 0px;
+    }
+    .chipSection {
+        margin-top: 16px;
+        margin-left: -15px;
+    }
 }
